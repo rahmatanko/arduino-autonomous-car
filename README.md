@@ -1,34 +1,20 @@
 # Arduino autonomous car project
 
-This project implements an autonomous car using Arduino, designed to navigate through obstacles and follow predefined paths without manual control. The car uses sensors for real-time environment detection and decision-making to drive safely and efficiently.
+### Designed an autonomous vehicle that:
+* Detects traffic signs (start, slope, stop) using ESP32-CAM and OpenCV
+* Maintains 10 cm/sec speed via PID control despite slope changes (0-100% incline)
+* Prevents lane deviations with real-time line-following algorithms
+* Dynamically adjusts DC motors using mathematical modeling
 
-### Features
-* Obstacle detection and avoidance using ultrasonic sensors
-
-* Line following capability with infrared sensors
-
-Motor control for steering and speed management
-
-Modular Arduino code for easy customization and expansion
-
-* Real-time feedback via serial monitor
-
-### Hardware Components
-* Arduino Uno (or compatible board)
-
-* Ultrasonic sensor (HC-SR04)
-
-* Infrared line sensors
-
-* DC motors with motor driver (L298N)
-
-* Chassis with wheels and power supply
-
-* Jumper wires, breadboard, and mounting hardware
+### Hardware
+* Arduino Uno (Motor control)
+* ESP32-CAM (Sign detection)
+* L298N Motor Driver
+* Infrared line sensors (Track following)
+* LED indicators (Slope transition feedback)
+* Ultrasonic sensor (HCSR04)
 
 ### Software
-* Arduino IDE for programming
-
-* Code structured into sensor reading, decision logic, and motor control modules
-
-* Comments included for ease of understanding and modification
+* OpenCV (Sign recognition)
+* Python (Image processing logic)
+* Arduino C++ (Motor/sensor control)
